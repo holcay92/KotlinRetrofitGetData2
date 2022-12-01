@@ -12,11 +12,11 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
 
-        val quotes = InstanceForRt.getInstance().create(ApiInterface::class.java)
+        val user = InstanceForRt.getInstance().create(ApiInterface::class.java)
 
         GlobalScope.launch {
-            val response = quotes.getProducts()
-            if (response.isSuccessful) {
+            val response = user.getUsers()
+            if (response != null) {
                 Log.d("RESPONSE", response.body().toString())
             }
         }

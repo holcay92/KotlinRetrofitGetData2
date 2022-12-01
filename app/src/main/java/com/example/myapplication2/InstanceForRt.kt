@@ -5,7 +5,7 @@ import retrofit2.converter.gson.GsonConverterFactory
 
 object InstanceForRt {
 
-    val BASEURL ="https://dummyjson.com/products"
+    val BASEURL ="https://api.github.com/"
 
     fun getInstance():Retrofit{
         return Retrofit.Builder()
